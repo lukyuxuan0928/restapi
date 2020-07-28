@@ -1,9 +1,17 @@
 pipeline {
-    agent { docker 'maven:3.3.3' }
+    agent any
+    triggers {
+        pollSCM '* * * * *'
+    }
     stages {
-        stage('build') {
+        stage('Check Version') {
             steps {
                 sh 'mvn --version'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'mvn package
             }
         }
     }
