@@ -37,4 +37,10 @@ public class PlayerServiceImpl implements IPlayerService {
 
         return playerDtos;
     }
+
+    @Override
+    public boolean checkPlayer() {
+//      sample
+        return true;
+    }
 }
