@@ -7,7 +7,9 @@ import java.util.List;
 
 
 public interface IPlayerService {
-    abstract PlayerDto getPlayerInfo();
+    PlayerDto getPlayerInfo();
 
-    abstract List<PlayerDto> getAllPlayer();
+    List<PlayerDto> getAllPlayer();
+
+    boolean checkPlayer();
 }
